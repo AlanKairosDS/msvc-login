@@ -38,5 +38,5 @@ public class SingupRequest {
   private String password;
 
   @DBRef
-  private Set<Roles> roles;
+  private Set<String> roles;
 }
