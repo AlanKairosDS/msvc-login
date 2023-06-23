@@ -11,7 +11,7 @@
             <PatternLayout pattern="${LOG_PATTERN}"/>
         </Console>
         <RollingFile
-                name="race"
+                name="login"
                 fileName="${LOG_DIR}/msvc-login.log"
                 filePattern="${LOG_DIR}/msvc-login.%d{yyyy-MM-dd}.log.gz"
                 ignoreExceptions="false">
@@ -24,8 +24,8 @@
     </Appenders>
 
     <Loggers>
-        <Logger name="race" level="debug" additivity="false">
-            <appender-ref ref="race" level="debug"/>
+        <Logger name="login" level="debug" additivity="false">
+            <appender-ref ref="login" level="debug"/>
         </Logger>
 
         <Root level="info" additivity="false">
