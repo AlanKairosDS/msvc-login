@@ -1,0 +1,21 @@
+server:
+  port: 8002
+  servlet:
+    context-path: /msvc-login
+
+spring:
+  application:
+    name: msvc-login
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  data:
+    mongodb:
+      database: ecommerce_msvc_login
+      host: localhost
+      port: 27017
+
+msvclogin:
+  app:
+    jwtCookieName: msvclogin
+    jwtSecret: msvcLoginSecretKey
+    jwtExpirationTime: 86400000

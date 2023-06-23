@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+
+    <Properties>
+        <Property name="LOG_PATTERN">%d{yyyy-MM-dd HH:mm:ss} - %-5level - %C-%L-%msg%n</Property>
+        <Property name="LOG_DIR">./logs</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <RollingFile
+                name="race"
+                fileName="${LOG_DIR}/msvc-login.log"
+                filePattern="${LOG_DIR}/msvc-login.%d{yyyy-MM-dd}.log.gz"
+                ignoreExceptions="false">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy interval="1"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+        </RollingFile>
+    </Appenders>
+
+    <Loggers>
+        <Logger name="race" level="debug" additivity="false">
+            <appender-ref ref="race" level="debug"/>
+        </Logger>
+
+        <Root level="info" additivity="false">
+            <AppenderRef ref="Console" level="info"/>
+        </Root>
+    </Loggers>
+
+</Configuration>
