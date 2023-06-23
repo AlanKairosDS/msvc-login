@@ -10,7 +10,7 @@ spring:
     exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
   data:
     mongodb:
-      database: ecommerce_msvc_login
+      database: msvc_login
       host: localhost
       port: 27017
 
