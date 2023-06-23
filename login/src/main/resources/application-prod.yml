@@ -11,7 +11,7 @@ spring:
   data:
     mongodb:
       database: msvc_login
-      host: localhost
+      host: host.docker.internal
       port: 27017
 
 msvclogin:
