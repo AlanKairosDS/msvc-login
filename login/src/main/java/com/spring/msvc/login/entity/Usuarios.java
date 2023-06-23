@@ -21,7 +21,7 @@ import java.util.Set;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "usuarios")
+@Document(collection = "users")
 public class Usuarios {
 
   @Id

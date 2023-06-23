@@ -20,5 +20,5 @@ public class Roles {
   @Id
   private String id;
 
-  private RolesDataBase nombre;
+  private RolesDataBase name;
 }
