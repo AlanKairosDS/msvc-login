@@ -9,14 +9,5 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 @ComponentScan(basePackages = {"com.spring"})
 public class ConfigSpring {
-
-  @Bean
-  WebMvcConfigurer corsConfigurer () {
-    return new WebMvcConfigurer() {
-      @Override
-      public void addCorsMappings (CorsRegistry registry) {
-        registry.addMapping("/**").allowedOrigins("*").maxAge(3600);
-      }
-    };
-  }
+  //No hace nada
 }
