@@ -1,5 +1,5 @@
 server:
-  port: 8001
+  port: 8002
   servlet:
     context-path: /msvc-login
 
@@ -11,7 +11,7 @@ spring:
   data:
     mongodb:
       database: msvc_login_dev
-      host: localhost
+      host: host.docker.internal
       port: 27017
 
 msvclogin:
@@ -19,3 +19,4 @@ msvclogin:
     jwtCookieName: msvclogin
     jwtSecret: msvcLoginSecretKey
     jwtExpirationTime: 86400000
+    origin: http://localhost:9000

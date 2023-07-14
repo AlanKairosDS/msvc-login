@@ -6,4 +6,4 @@ COPY ./target/msvc-login.jar .
 
 EXPOSE 8002
 
-CMD ["java", "-Dspring.profiles.active=dev", "-jar", "msvc-login.jar"]
+CMD ["java", "-Dspring.profiles.active=prod", "-jar", "msvc-login.jar"]

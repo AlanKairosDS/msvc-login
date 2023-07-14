@@ -11,7 +11,7 @@ spring:
   data:
     mongodb:
       database: msvc_login
-      host: host.docker.internal
+      host: ec2-3-85-108-239.compute-1.amazonaws.com
       port: 27017
 
 msvclogin:
@@ -19,3 +19,4 @@ msvclogin:
     jwtCookieName: msvclogin
     jwtSecret: msvcLoginSecretKey
     jwtExpirationTime: 86400000
+    origin: http://ec2-3-85-108-239.compute-1.amazonaws.com:9000
